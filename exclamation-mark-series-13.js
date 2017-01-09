@@ -4,8 +4,6 @@ function product(s){
   
   var str = s.split("");
   
-  console.log(str)
-  
   str.map(function(current){
     if (current === "!") {
       exclamationPoints += 1;
@@ -14,6 +12,14 @@ function product(s){
       questionMarks += 1;
     }
   })
+
+  return exclamationPoints * questionMarks;
+}
+
+/* Refactor */
+function product(s){
+  var exclamationPoints = s.split('!').length - 1;
+  var questionMarks = s.split('?').length - 1;
 
   return exclamationPoints * questionMarks;
 }

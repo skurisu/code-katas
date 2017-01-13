@@ -54,7 +54,7 @@ Array.prototype.all = function (p) {
     return p(value);
   });
   
-  if(evaluated.length === filtered.length) {
+  if(this.length === filtered.length) {
     return true;
   }
   return false;

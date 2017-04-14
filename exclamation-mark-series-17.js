@@ -4,22 +4,25 @@ function balance(left,right){
   
   if(leftWeight > rightWeight){
     return "Left";
-  } if (leftWeight < rightWeight) {
+  } 
+  if (leftWeight < rightWeight) {
     return "Right";
-  } else {
-    return "Balance";
-  }
+  } 
+
+  return "Balance";
   
 }
+
+
 
 function total(str){
   var val = str.split("");
   var total = 0;
   
-  val.map(function(c){
+  val.map((c) => {
     if(c === "!") {
       total+=2
-    } if (c === "?") {
+    } else if (c === "?") {
       total+=3
     }
   })

@@ -20,3 +20,23 @@ function wave(str){
   
   return finalWave;
 }
+
+/* refactor */
+function wave(str){
+  let finalWave = [];
+  let waveArr = str.split("");
+  
+  waveArr.map((c,i) => {
+    let capLetter = c.toUpperCase();
+    let lowLetter = c.toLowerCase();
+    let replace = waveArr.splice(i, 1, capLetter);
+    
+    if(c !== " "){
+      finalWave.push(waveArr.join(""));
+    }
+      
+    waveArr.splice(i, 1, lowLetter);
+  }); 
+
+  return finalWave;
+}

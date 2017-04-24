@@ -1,7 +1,6 @@
 function wave(str){
   let finalWave = [];
   let waveArr = str.split("");
-  console.log(waveArr);
   
   for(var i = 0; i < waveArr.length; i++) {
     let capLetter = waveArr[i].toUpperCase();
@@ -23,13 +22,13 @@ function wave(str){
 
 /* refactor */
 function wave(str){
-  let finalWave = [];
-  let waveArr = str.split("");
+  const finalWave = [];
+  const waveArr = str.split("");
   
   waveArr.map((c,i) => {
-    let capLetter = c.toUpperCase();
-    let lowLetter = c.toLowerCase();
-    let replace = waveArr.splice(i, 1, capLetter);
+    const capLetter = c.toUpperCase();
+    const lowLetter = c.toLowerCase();
+    const replace = waveArr.splice(i, 1, capLetter);
     
     if(c !== " "){
       finalWave.push(waveArr.join(""));
